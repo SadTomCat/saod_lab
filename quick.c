@@ -1,29 +1,25 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 #include <inttypes.h>
 
-#define ARR_SIZE 11
-#define F 12.00
+#define ARR_SIZE 100
 
-//сортировка 
-int qsort(int *p_arr)
+int quicks(uint32_t *arr)
 {
-    printf("%d", *p_arr);
-    return *p_arr;
+
 }
 
 int main()
 {
     srand(time(NULL));
-    uint32_t arr[ARR_SIZE]; //неотсортированный массив
+    uint32_t arr[ARR_SIZE];
 
     //заполнение массива 
     for(int i = 0; i < ARR_SIZE; i++)
     {
-        arr[i] = rand()%30;
+        arr[i] = rand() % 10000;
     }
-    qsort(arr[ARR_SIZE / 2]);
-    printf("%d", qsort(arr[ARR_SIZE / 2]));
 
+    return 0;
 }

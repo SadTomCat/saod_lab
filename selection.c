@@ -15,11 +15,12 @@ int main()
     //заполнение массива 
     for(int i = 0; i < ARR_SIZE; i++) 
     {
-        arr[i] = rand()%100000;
+        arr[i] = rand() % 100000;
     }
 
-    signed long long int StartTime = time(NULL);
     //сортировка
+    signed long long int StartTime = time(NULL); //время до сортировки 
+   
     for(int i = 0; i < ARR_SIZE - 1; i++) 
     {
         min = i;
@@ -38,7 +39,7 @@ int main()
         arr[i] = arr[min];
         arr[min] = swap;
     }
-    signed long long int EndTime = time(NULL);
+    signed long long int EndTime = time(NULL);//время после сортировки 
     printf("%lli seconds\n", EndTime - StartTime);
 
     return 0; 
